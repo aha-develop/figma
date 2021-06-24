@@ -27,25 +27,26 @@ aha.on("figmaAttribute", ({ record, fields }) => {
             width="95%"
             height="400"
             frameBorder="0"
-            style={{ border: "1px solid #ccc" }}
+            style={{ border: "1px solid #ccc", marginRight: 5 }}
             src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(
               fields.figmaLink
             )}`}
             allowFullScreen
           ></iframe>
         )}
-        <aha-action-menu buttonSize="medium" style={{ marginLeft: 5 }}>
-          <aha-menu>
-            <aha-menu-item onClick={() => link(record)}>
-              Link Figma file...
+        <aha-menu>
+          <aha-button slot="button" type="attribute" size="small">
+            <aha-icon icon="fa-solid fa-ellipsis"></aha-icon>
+          </aha-button>
+          <aha-menu-item onClick={() => link(record)}>
+            Link Figma file...
+          </aha-menu-item>
+          {fields.figmaLink && (
+            <aha-menu-item onClick={() => unLink(record)}>
+              Unlink
             </aha-menu-item>
-            {fields.link && (
-              <aha-menu-item onClick={() => unLink(record)}>
-                Unlink
-              </aha-menu-item>
-            )}
-          </aha-menu>
-        </aha-action-menu>
+          )}
+        </aha-menu>
       </aha-flex>
     </>
   );
