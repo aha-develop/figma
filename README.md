@@ -19,7 +19,7 @@ It provides these contributions:
 Install `aha-cli`:
 
 ```sh
- npm install -g @aha-app/aha-cli
+ npm install -g aha-cli
 ```
 
 Clone the repo:
