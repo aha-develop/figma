@@ -13,6 +13,8 @@ It provides these contributions:
 ## Installing the extension
 
 **Note: In order to install an extension into your Aha! Develop account, you must be an account administrator.**
+Install the figma extension by clicking [here](https://github.com/aha-develop/figma/releases/download/1.0.0/aha-develop.figma-v1.0.0.gz).
+
 
 ## Working on the extension
 
