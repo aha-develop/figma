@@ -1,4 +1,6 @@
 import React from "react";
+import { EmbeddedContent } from "@aha-develop/aha-develop-react";
+import { ensureEmbedFlags } from "../ensureEmbedFlags";
 
 aha.on("figmaLink", async ({ record }) => {
   const link = await aha.commandPrompt("Paste a Figma file URL");
@@ -18,21 +20,14 @@ async function unLink(record) {
 }
 
 aha.on("figmaAttribute", ({ record, fields }) => {
+  const url = ensureEmbedFlags(fields.figmaLink)
+
   return (
     <>
-      <aha-flex alignItems="start" justifycontent="space-between">
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gridGap: 10 }}>
         {!fields.figmaLink && <span />}
         {fields.figmaLink && (
-          <iframe
-            width="95%"
-            height="400"
-            frameBorder="0"
-            style={{ border: "1px solid #ccc", marginRight: 5 }}
-            src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(
-              fields.figmaLink
-            )}`}
-            allowFullScreen
-          ></iframe>
+          <EmbeddedContent src={url} />
         )}
         <aha-menu>
           <aha-button slot="button" type="attribute" size="small">
@@ -47,7 +42,7 @@ aha.on("figmaAttribute", ({ record, fields }) => {
             </aha-menu-item>
           )}
         </aha-menu>
-      </aha-flex>
+      </div>
     </>
   );
 });
