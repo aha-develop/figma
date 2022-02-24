@@ -1,0 +1,52 @@
+{
+  "name": "@aha-develop/figma",
+  "description": "Figma integration",
+  "version": "1.0.0",
+  "author": "Aha! (support@aha.io)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aha-develop/figma"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@aha-app/aha-cli": "^1.9.2"
+  },
+  "ahaExtension": {
+    "cspSources": [
+      "https://api.figma.com",
+      "https://www.figma.com"
+    ],
+    "contributes": {
+      "views": {
+        "figmaAttribute": {
+          "title": "Figma",
+          "entryPoint": "src/views/figmaLink.js",
+          "host": "attribute",
+          "recordTypes": [
+            "Feature",
+            "Epic",
+            "Requirement"
+          ]
+        },
+        "figmaPanel": {
+          "title": "Figma",
+          "entryPoint": "src/views/figmaPanel.js",
+          "host": "panel"
+        }
+      },
+      "commands": {
+        "figmaLink": {
+          "title": "Link a figma file",
+          "entryPoint": "src/views/figmaLink.js"
+        },
+        "figmaUnLink": {
+          "title": "Unlink a figma file",
+          "entryPoint": "src/views/figmaLink.js"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "@aha-develop/aha-develop-react": "^1.2.0"
+  }
+}
