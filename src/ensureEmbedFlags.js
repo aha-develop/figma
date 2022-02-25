@@ -1,4 +1,6 @@
 export const ensureEmbedFlags = (url) => {
+  if (!url) return
+
   if (url.includes('figma.com/embed')) {
     return url
   } else {
