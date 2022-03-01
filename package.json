@@ -47,6 +47,6 @@
     }
   },
   "dependencies": {
-    "@aha-develop/aha-develop-react": "^1.2.0"
+    "@aha-develop/aha-develop-react": "^1.2.1"
   }
 }
