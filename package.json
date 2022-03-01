@@ -27,6 +27,11 @@
             "Epic",
             "Requirement"
           ]
+        },
+        "figmaPanel": {
+          "title": "Figma",
+          "entryPoint": "src/views/figmaPanel.js",
+          "host": "panel"
         }
       },
       "commands": {
@@ -40,5 +45,8 @@
         }
       }
     }
+  },
+  "dependencies": {
+    "@aha-develop/aha-develop-react": "^1.2.1"
   }
 }
