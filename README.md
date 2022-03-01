@@ -5,6 +5,7 @@ This [Aha! Develop](https://www.aha.io/develop/overview) extension allows you to
 It provides these contributions:
 
 - `Figma attribute` - Link a Figma design to a record in Aha! to see a live preview of the design.
+- `Figma panel` - Embed a Figma design in a note in Aha! to see a live preview of the design.
 
 ## Demo
 
