@@ -23,7 +23,7 @@ Install the figma extension by clicking [here](https://secure.aha.io/settings/ac
 Install `aha-cli`:
 
 ```sh
- npm install -g aha-cli
+npm install -g aha-cli
 ```
 
 Clone the repo:
