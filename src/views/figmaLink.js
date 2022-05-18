@@ -20,27 +20,37 @@ async function unLink(record) {
 }
 
 aha.on("figmaAttribute", ({ record, fields }) => {
-  const url = ensureEmbedFlags(fields.figmaLink)
+  const url = ensureEmbedFlags(fields.figmaLink);
 
   return (
     <>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gridGap: 10 }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr auto",
+          gridGap: 10,
+        }}
+      >
         {!fields.figmaLink && <span />}
-        {fields.figmaLink && (
-          <EmbeddedContent src={url} />
-        )}
+        {fields.figmaLink && <EmbeddedContent src={url} />}
         <aha-menu>
-          <aha-button slot="button" type="attribute" size="small">
+          <aha-button slot="control" kind="attribute" size="small">
             <aha-icon icon="fa-solid fa-ellipsis"></aha-icon>
           </aha-button>
-          <aha-menu-item onClick={() => link(record)}>
-            Link Figma file...
-          </aha-menu-item>
-          {fields.figmaLink && (
-            <aha-menu-item onClick={() => unLink(record)}>
-              Unlink
+          <aha-menu-content>
+            <aha-menu-item>
+              <a href="#" onClick={() => link(record)}>
+                Link Figma file...
+              </a>
             </aha-menu-item>
-          )}
+            {fields.figmaLink && (
+              <aha-menu-item>
+                <a href="#" onClick={() => unLink(record)}>
+                  Unlink
+                </a>
+              </aha-menu-item>
+            )}
+          </aha-menu-content>
         </aha-menu>
       </div>
     </>
