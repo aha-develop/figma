@@ -39,15 +39,15 @@ aha.on("figmaAttribute", ({ record, fields }) => {
           </aha-button>
           <aha-menu-content>
             <aha-menu-item>
-              <a href="#" onClick={() => link(record)}>
+              <aha-button kind="plain" onClick={() => link(record)}>
                 Link Figma file...
-              </a>
+              </aha-button>
             </aha-menu-item>
             {fields.figmaLink && (
               <aha-menu-item>
-                <a href="#" onClick={() => unLink(record)}>
+                <aha-button kind="plain" onClick={() => unLink(record)}>
                   Unlink
-                </a>
+                </aha-button>
               </aha-menu-item>
             )}
           </aha-menu-content>
