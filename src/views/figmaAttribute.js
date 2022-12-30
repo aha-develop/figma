@@ -2,15 +2,6 @@ import React from "react";
 import { EmbeddedContent } from "@aha-develop/aha-develop-react";
 import { ensureEmbedFlags } from "../ensureEmbedFlags";
 
-aha.on("figmaLink", async ({ record }) => {
-  const link = await aha.commandPrompt("Paste a Figma file URL");
-  await record.setExtensionField("aha-develop.figma", "figmaLink", link);
-});
-
-aha.on("figmaUnLink", async ({ record }) => {
-  await record.setExtensionField("aha-develop.figma", "figmaLink", null);
-});
-
 async function link(record) {
   await aha.command("aha-develop.figma.figmaLink", { record });
 }

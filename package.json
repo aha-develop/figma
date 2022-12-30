@@ -20,7 +20,7 @@
       "views": {
         "figmaAttribute": {
           "title": "Figma",
-          "entryPoint": "src/views/figmaLink.js",
+          "entryPoint": "src/views/figmaAttribute.js",
           "host": "attribute",
           "recordTypes": [
             "Feature",
@@ -37,11 +37,11 @@
       "commands": {
         "figmaLink": {
           "title": "Link a figma file",
-          "entryPoint": "src/views/figmaLink.js"
+          "entryPoint": "src/commands/figmaLink.js"
         },
         "figmaUnLink": {
           "title": "Unlink a figma file",
-          "entryPoint": "src/views/figmaLink.js"
+          "entryPoint": "src/commands/figmaUnLink.js"
         }
       }
     }
