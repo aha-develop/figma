@@ -2,11 +2,13 @@ import React from "react";
 import { EmbeddedContent } from "@aha-develop/aha-develop-react";
 import { ensureEmbedFlags } from "../ensureEmbedFlags";
 
-const AhaPanel = aha.getPanel("aha-develop.figma", "figmaPanel", { name: "Figma" });
+const AhaPanel = aha.getPanel("aha-develop.figma", "figmaPanel", {
+  name: "Figma",
+});
 
 AhaPanel.on("render", ({ props }) => {
   const { panel } = props;
-  const url = ensureEmbedFlags(panel.settings.url)
+  const url = ensureEmbedFlags(panel.settings.url);
 
   return <EmbeddedContent src={url} />;
 });
@@ -17,7 +19,7 @@ AhaPanel.on({ action: "settings" }, () => {
     {
       key: "url",
       type: "Text",
-      title: "Embed url"
+      title: "Embed url",
     },
   ];
 });

@@ -20,7 +20,7 @@
       "views": {
         "figmaAttribute": {
           "title": "Figma",
-          "entryPoint": "src/views/figmaLink.js",
+          "entryPoint": "src/views/figmaAttribute.js",
           "host": "attribute",
           "recordTypes": [
             "Feature",
@@ -37,16 +37,17 @@
       "commands": {
         "figmaLink": {
           "title": "Link a figma file",
-          "entryPoint": "src/views/figmaLink.js"
+          "entryPoint": "src/commands/figmaLink.js"
         },
         "figmaUnLink": {
           "title": "Unlink a figma file",
-          "entryPoint": "src/views/figmaLink.js"
+          "entryPoint": "src/commands/figmaUnLink.js"
         }
       }
     }
   },
   "dependencies": {
-    "@aha-develop/aha-develop-react": "^1.2.1"
+    "@aha-develop/aha-develop-react": "^1.4.0",
+    "prettier": "^2.8.1"
   }
 }
