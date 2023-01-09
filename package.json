@@ -47,7 +47,7 @@
     }
   },
   "dependencies": {
-    "@aha-develop/aha-develop-react": "^1.4.0",
+    "@aha-develop/aha-develop-react": "^1.4.2",
     "prettier": "^2.8.1"
   }
 }
