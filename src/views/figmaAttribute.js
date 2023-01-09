@@ -13,6 +13,7 @@ aha.on("figmaAttribute", ({ record, fields }) => {
       product="Figma"
       fieldName="figmaLink"
       placeholder="Add Figma URL"
+      transformValue={ensureEmbedFlags}
     />
   );
 });

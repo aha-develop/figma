@@ -23,10 +23,10 @@
     open "^7.3.0"
     tslib "^1"
 
-"@aha-develop/aha-develop-react@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@aha-develop/aha-develop-react/-/aha-develop-react-1.4.0.tgz#48f75b29e8a3bede834daa5930428185f070f1d4"
-  integrity sha512-oG35010sDwV9gHrOCuB6ZkhQ5oA2JGvSiueWRcG51Cww+ey3t/LHTSsNaUksLd1eAkKIYDj98xPAmWsG67M9KQ==
+"@aha-develop/aha-develop-react@^1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@aha-develop/aha-develop-react/-/aha-develop-react-1.4.2.tgz#39d4be8472b723075e4e07fc6f57855ce1018d5a"
+  integrity sha512-bqkleoOwqMpF0F0Iff1ol8lytMKr93DAuXg1Q8TAIVuKncW/lb93vuEW6ZyNLnikOiA3MbQV68BDD1ohvIMweg==
 
 "@fal-works/esbuild-plugin-global-externals@^2.1.1":
   version "2.1.2"
