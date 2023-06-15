@@ -23,6 +23,7 @@
           "entryPoint": "src/views/figmaAttribute.js",
           "host": "attribute",
           "recordTypes": [
+            "Release",
             "Feature",
             "Epic",
             "Requirement"
